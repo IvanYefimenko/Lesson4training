@@ -1,0 +1,5 @@
+@import "common.css"; /* це імпорт стилів для окремої сторінки */
+@import "control.css";
+@import "header.css";
+@import "products.css";
+@import "footer.css";

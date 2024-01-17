@@ -1,0 +1,64 @@
+/* Стилізація заголовка сторінки */
+.header {
+  background-color: var(--background-color-dark);
+  /* Колір фону заголовка, використовує змінну для кольору */
+  padding: 5px; /* Внутрішні відступи з усіх боків заголовка */
+}
+
+/* Стилізація заголовка та логотипу у заголовку */
+.header__title,
+.header__logo {
+  font-size: 3.5rem; /* Розмір шрифту */
+  font-weight: bold; /* Товщина шрифту */
+  text-align: center; /* Вирівнювання тексту по центру */
+  color: var(--text-color); /* Колір тексту, використовує змінну */
+  text-transform: uppercase; /* Текст великими літерами */
+}
+
+/* Стилізація меню у заголовку */
+.header__menu {
+  display: flex; /* Включення гнучкого контейнера */
+  flex-direction: column; /* Елементи в колонку */
+}
+
+/* Стилізація пунктів меню */
+.header__menu .menu__item {
+  color: var(--text-color); /* Колір тексту пунктів меню */
+}
+
+/* Ефект для пунктів меню при наведенні курсору */
+.header__menu .menu__item:hover {
+  text-decoration: underline; /* Підкреслення тексту при наведенні */
+}
+
+/* Медіа-запит для екранів ширше 500 пікселів */
+@media (min-width: 500px) {
+  .header__nav {
+    display: flex; /* Включення гнучкого контейнера для навігації */
+  }
+
+  .header__menu {
+    flex-direction: row; /* Елементи в рядок */
+    flex: 1; /* Гнучкість контейнера */
+    align-items: center; /* Вирівнювання елементів по центру по вертикалі */
+    justify-content: space-around; /* Розподіл елементів з рівними відступами */
+  }
+}
+
+/* Стилізація банера у заголовку */
+.header__banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/baby-yoda.svg); /* Фонове зображення з градієнтом і зображенням */
+  min-height: 500px; /* Мінімальна висота */
+  background-size: cover; /* Фонове зображення покриває весь елемент */
+  background-position: center; /* Центрування фонового зображення */
+  display: flex; /* Включення гнучкого контейнера */
+  align-items: center; /* Вирівнювання елементів по центру по вертикалі */
+  justify-content: center; /* Вирівнювання елементів по центру по горизонталі */
+  flex-direction: column; /* Елементи в колонку */
+}
+
+/* Зміна кольору заголовку */
+.header__title {
+  color: var(--accent-color); /* Колір заголовка, використовує змінну */
+}
